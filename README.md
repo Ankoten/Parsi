@@ -11,6 +11,6 @@
   BOT_TOKEN = 'токен вашего бота'
 
 5. Далее запустить проект с помощью команд:
-  docker compose build
+  docker compose build;
   docker compose up
 
