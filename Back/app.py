@@ -1,5 +1,6 @@
 import os
 import requests
+import fake_useragent
 from dotenv import load_dotenv
 from flask import Flask, request
 from flask_marshmallow import Marshmallow
@@ -64,8 +65,9 @@ def get_data_from_hh(url):
 
 
 def get_headers():
+    user_ag = fake_useragent.UserAgent().random
     headers = {
-        'user-agent': os.getenv('USER_AGENT')}
+        'user-agent': user_ag}
     persona = {
         'headers': headers
     }
